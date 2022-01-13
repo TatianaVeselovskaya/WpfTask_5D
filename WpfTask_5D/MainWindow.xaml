@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfTask_5D.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTask_5D"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu Margin="5" Padding="5" Grid.Row="0">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Открыть" Click="Open" />
+                <MenuItem Header="_Coхранить" Click="Save" />
+                <Separator />
+                <MenuItem Header="_Выход" Click="exit" />
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1">
+            <ToolBar Margin="5" Padding="5" VerticalAlignment="Top">
+                <Button Width="50" Height="50" Click="ButtonPencil">
+                    <Image Source="picture5D\Pencil.jpg"/>
+                </Button>
+                <Separator/>
+                <Button Width="50" Height="50" Click="ButtonEraser">
+                    <Image Source="picture5D\Eraser.jpg"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        
+        <InkCanvas x:Name="InkCanvas" Grid.Row="2"/>
+        
+    </Grid>
+</Window>
